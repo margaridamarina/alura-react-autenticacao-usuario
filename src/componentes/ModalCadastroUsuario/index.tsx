@@ -1,3 +1,4 @@
+import axios from "axios"
 import { AbBotao, AbCampoTexto, AbModal } from "ds-alurabooks"
 import { useState } from "react"
 
@@ -25,8 +26,21 @@ const ModalCadastroUsuario = () => {
             cep,
             complemento
         }
-        console.log(usuario)
-        alert('Usuário foi cadastrado com sucesso!')
+
+        axios.post('http://localhost:3006/public/registrar', usuario)
+            .then(() => {
+                alert('Usuário cadastrado com sucesso!')
+                setNome('')
+                setEmail('')
+                setEndereco('')
+                setComplemento('')
+                setCep('')
+                setSenha('')
+                setSenhaConfirmada('')
+            })
+            .catch(() => {
+                alert('OPS! Alguma coisa deu errado!')
+            })
     }
 
     return (<AbModal 
