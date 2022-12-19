@@ -1,5 +1,6 @@
 ### Rodando projeto 
 ```
+$ npm i
 $ npm start
 ```
 ### Rodando api 
