@@ -31,7 +31,7 @@ const ModalLoginUsuario = ({ aberta, aoFechar, aoEfetuarLogin } : PropsModalLogi
                 aoFechar()
             })
             .catch(erro => {
-                if (erro?.response?.data?.message){
+                if (erro.response.data.message){
                     alert(erro.response.data.message)
                 } else {
                     alert('Aconteceu um erro inesperado ao efetuar o seu login! Entre em contato com o suporte!')
