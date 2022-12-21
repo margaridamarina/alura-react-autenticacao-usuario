@@ -8,7 +8,7 @@
 
 .pedidos .pedido {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid #002F52;
     padding: 12px;
